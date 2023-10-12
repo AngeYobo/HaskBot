@@ -1,0 +1,1 @@
+dist-newstyle/build/x86_64-windows/ghc-9.2.7/HaskBot-0.1.0.0/x/HaskBot/build/HaskBot/HaskBot.exe filter=lfs diff=lfs merge=lfs -text
