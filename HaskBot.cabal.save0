@@ -1,0 +1,78 @@
+cabal-version:       2.4
+name:                HaskBot
+version:             0.1.0.0
+author:              docybo
+maintainer:          angeyobo@gmail.com
+extra-source-files:   CHANGELOG.md
+
+-- A short (one-line) description of the package.
+-- synopsis:           A Haskell-based trading bot for interacting with the Binance API.
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:        https://github.com/yourusername/haskbot/issues
+
+-- The license under which the package is released.
+-- license:            BSD3
+
+-- Specify the category if applicable.
+-- category:
+
+executable HaskBot
+  main-is:            Main.hs
+
+  -- Modules included in this executable, other than Main.
+  other-modules:      DataFetcher
+                      IndicatorEngine
+
+  -- LANGUAGE extensions used by modules in this package.
+  -- other-extensions:
+
+  build-depends:      base >= 4.14 && < 5,
+                      bytestring,
+                      http-client,
+                      http-conduit,
+                      time,
+                      aeson,
+                      http-types,
+                      text,
+                      http-client-tls,
+                      QuickCheck,
+                      vector >= 0.13.0.0,
+                      WebSockets
+                      
+                      
+
+  hs-source-dirs:     app
+  default-language:   Haskell2010
+
+test-suite HaskBotTests
+  type:               exitcode-stdio-1.0
+  main-is:            Main.hs
+
+  -- Modules included in the test suite.
+  other-modules:      DataFetcher
+                      IndicatorEngine
+                      DataFetcherSpec 
+                      IndicatorEngineSpec 
+
+  build-depends:      base >= 4.14 && < 5,
+                      bytestring,
+                      http-client,
+                      http-conduit,
+                      time,
+                      aeson,
+                      http-types,
+                      hspec,
+                      HUnit,
+                      text,
+                      http-client-tls,
+                      QuickCheck,
+                      vector
+                      WebSockets
+                      
+                      
+  hs-source-dirs:     test, app
+  default-language:   Haskell2010

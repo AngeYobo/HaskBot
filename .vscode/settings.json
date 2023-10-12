@@ -1,0 +1,6 @@
+{
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "MutableAI.upsell": false,
+    "git.ignoreLimitWarning": true
+}
